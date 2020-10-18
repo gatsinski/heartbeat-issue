@@ -1,0 +1,6 @@
+lib
+build
+.gradle
+.settings
+.idea
+.vscode
