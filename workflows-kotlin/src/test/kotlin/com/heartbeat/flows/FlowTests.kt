@@ -32,7 +32,7 @@ class FlowTests {
         val flow = StartHeartbeatFlow()
         node.startFlow(flow).get()
 
-        val sleepTime: Long = 6000
+        val sleepTime: Long = 1000
         Thread.sleep(sleepTime)
 
         val recordedTxs = node.transaction {
@@ -41,7 +41,7 @@ class FlowTests {
             recordedTxs
         }
 
-        val totalExpectedTransactions = 7
+        val totalExpectedTransactions = 2
         assertEquals(totalExpectedTransactions, recordedTxs.size)
     }
 }
